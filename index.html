@@ -4,27 +4,40 @@
   <meta charset="UTF-8">
   <title>にゃん太のホームページ</title>
   <style>
-  body {
-    background-color: #f0f8ff;
-    font-family: sans-serif;
-    text-align: center;
-    padding: 30px;
-  }
-  h1 {
-    color: #444;
-  }
-  p {
-    color: #555;
-    font-size: 1.2em;
-  }
-</style>
+    body {
+      background-color: #f0f8ff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #444;
+      font-size: 2.5em;
+      animation: growShrink 3s infinite ease-in-out;
+    }
+
+    @keyframes growShrink {
+      0% { font-size: 2.5em; }
+      50% { font-size: 3.2em; }
+      100% { font-size: 2.5em; }
+    }
+    p {
+      color: #555;
+      font-size: 1.2em;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007acc;
+    }
+  </style>
 </head>
 <body>
   <h1>こんにちは、にゃん太です！</h1>
   <p>ここはぼくのホームページです。</p>
+
+  <nav>
+    <a href="about.html">自己紹介</a> 
+  </nav>
 </body>
-<nav>
-  <a href="#about">自己紹介</a> |
-  <a href="#contact">連絡先</a>
-</nav>
 </html>
