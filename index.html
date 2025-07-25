@@ -36,9 +36,71 @@
       text-decoration: underline;
       color: #005f99;
     }
+    .menu-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 2em;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1100;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #eee;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu ul li {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .side-menu ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .side-menu ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
   </style>
 </head>
 <body>
+  <div class="menu-button">
+    &#9776;
+  </div>
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="#">メニュー１</a></li>
+      <li><a href="#">メニュー２</a></li>
+      <li><a href="#">メニュー３</a></li>
+    </ul>
+  </div>
   <h1>こんにちは、にゃん太です！</h1>
   <p>ここはぼくのホームページです。</p>
 
@@ -51,4 +113,12 @@
     </ul>
   </nav>
 </body>
+<script>
+  const menuButton = document.querySelector('.menu-button');
+  const sideMenu = document.getElementById('sideMenu');
+
+  menuButton.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+  });
+</script>
 </html>
