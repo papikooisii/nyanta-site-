@@ -14,12 +14,14 @@
       color: #444;
       font-size: 2.5em;
       animation: growShrink 3s infinite ease-in-out;
+      display: inline-block;
+      transform-origin: center;
     }
 
     @keyframes growShrink {
-      0% { font-size: 2.5em; }
-      50% { font-size: 3.2em; }
-      100% { font-size: 2.5em; }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.28); }
+      100% { transform: scale(1); }
     }
     p {
       color: #555;
@@ -41,8 +43,12 @@
   <p>ここはぼくのホームページです。</p>
 
   <nav>
-    <a href="about.html">自己紹介</a> 
-    <a href=" labubu.html" >Labubu（ラブブ）とは</a>
+    <a href="about.html">自己紹介</a>
+    <ul style="list-style: none; padding: 0; margin-top: 15px;">
+      <li><a href="labubu.html" target="_blank">Labubu（ラブブ）とは</a></li>
+      <h2 style="font-size: 1.5em; margin-top: 90px;">ChatGPTのディープリサーチの回答集</h2>
+      <li><a href="nemuke.html" target="_blank">日中の眠気の原因と対策</a></li>
+    </ul>
   </nav>
 </body>
 </html>
